@@ -18,6 +18,11 @@ def info(item_number):
 
 
 
+@app.route("/purchase/<item_number>",methods=['PUT'])
+def purchase(item_number):
+    # result=requests.put("http://192.168.136.4:7000/purchase/"+str(item_number))
+    result=requests.put("http://127.0.0.1:7000/purchase/"+str(item_number))
+    return (result.content)
 
 
 if __name__ == '__main__':
